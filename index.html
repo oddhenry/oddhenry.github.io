@@ -3,86 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ukjent farvann</title>
-<meta name="description" content="Forslag til sider av internett du aldri har besøkt.">
+<title>oddhenry</title>
+<meta name="description" content="Små nettsider og eksperimenter.">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%2314273d'/%3E%3Cpath d='M16 4l3.5 12L16 28l-3.5-12z' fill='%23f3efe4'/%3E%3Cpath d='M16 4l3.5 12h-7z' fill='%23e2553a'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css">
+<style>
+  :root { --bg: #f6f4ee; --ink: #1a2330; --muted: #62707d; --line: #d6d1c3; --accent: #c8452b; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #10161d; --ink: #e9e5da; --muted: #93a1ac; --line: #2b3742; --accent: #ff8062; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: clamp(40px, 12vh, 120px) 16px 80px; }
+  h1 { font: 600 2.4rem/1.1 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; margin: 0 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 40px; }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li a {
+    display: block; padding: 18px 0; border-bottom: 1px solid var(--line);
+    color: inherit; text-decoration: none;
+  }
+  li strong { display: block; font-size: 1.2rem; }
+  li span { color: var(--muted); }
+  li a:hover strong, li a:focus-visible strong { color: var(--accent); }
+  li a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+</style>
 </head>
 <body>
-<header class="top">
-  <a class="brand" href="#utforsk">
-    <svg class="rose" id="rose" viewBox="0 0 48 48" aria-hidden="true">
-      <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1"/>
-      <g id="needle">
-        <path d="M24 5l5 19-5 19-5-19z" fill="currentColor" opacity=".25"/>
-        <path d="M24 5l5 19H19z" class="north"/>
-      </g>
-    </svg>
-    <span>Ukjent farvann</span>
-  </a>
-  <nav aria-label="Hovedmeny">
-    <a href="#utforsk" data-view="utforsk">Utforsk</a>
-    <a href="#interesser" data-view="interesser">Interesser</a>
-    <a href="#loggbok" data-view="loggbok">Loggbok</a>
-  </nav>
-</header>
-
 <main>
-  <!-- UTFORSK -->
-  <section id="view-utforsk" class="view">
-    <article class="card" id="card" aria-live="polite"></article>
+  <h1>oddhenry</h1>
+  <p class="lede">Små nettsider og eksperimenter.</p>
 
-    <div class="course">
-      <label for="course">Kurs</label>
-      <div class="course-row">
-        <span>Kjent kyst</span>
-        <input type="range" id="course" min="0" max="4" step="1">
-        <span>Åpent hav</span>
-      </div>
-      <p id="course-text" class="hint"></p>
-    </div>
-
-    <p class="progress" id="progress"></p>
-    <p class="keys hint">Tastatur: <kbd>Enter</kbd> besøk · <kbd>L</kbd> liker · <kbd>D</kbd> liker ikke · <kbd>K</kbd> kjenner den · <kbd>N</kbd> neste</p>
-  </section>
-
-  <!-- INTERESSER -->
-  <section id="view-interesser" class="view" hidden>
-    <h1>Interesser</h1>
-    <p class="lede">Dette har siden lært om deg så langt. Hver gang du liker eller misliker et sted, justeres temaene det hører til. Du kan også skru på dem selv.</p>
-    <ul class="tags-list" id="tags-list"></ul>
-  </section>
-
-  <!-- LOGGBOK -->
-  <section id="view-loggbok" class="view" hidden>
-    <h1>Loggbok</h1>
-    <p class="lede" id="log-summary"></p>
-
-    <figure class="chart">
-      <svg id="chart" viewBox="0 0 1000 640" role="img" aria-label="Sjøkart over alle nettstedene i katalogen"></svg>
-      <figcaption>
-        <span><i class="dot liked"></i> likt</span>
-        <span><i class="dot known"></i> besøkt eller kjent</span>
-        <span><i class="dot disliked"></i> mislikt</span>
-        <span><i class="dot blank"></i> uutforsket</span>
-      </figcaption>
-    </figure>
-
-    <div id="log-lists"></div>
-
-    <h2>Dataene dine</h2>
-    <p class="hint">Alt lagres bare i denne nettleseren. Eksporter en fil hvis du vil ta loggboken med til en annen maskin.</p>
-    <div class="data-actions">
-      <button type="button" id="export">Eksporter</button>
-      <button type="button" id="import">Importer</button>
-      <button type="button" id="reset" class="danger">Slett alt og start på nytt</button>
-      <input type="file" id="import-file" accept="application/json" hidden>
-    </div>
-  </section>
+  <!-- Ny nettside? Legg den i en egen mappe og kopier et <li> her. Se README.md. -->
+  <ul>
+    <li><a href="ukjent-farvann/">
+      <strong>Ukjent farvann</strong>
+      <span>Forslag til sider av internett du aldri har besøkt.</span>
+    </a></li>
+  </ul>
 </main>
-
-<script src="sites.js"></script>
-<script src="app.js"></script>
 </body>
 </html>
