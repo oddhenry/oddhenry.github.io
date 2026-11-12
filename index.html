@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oddhenry</title>
+<meta name="description" content="Små nettsider og eksperimenter.">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root { --bg: #f6f4ee; --ink: #1a2330; --muted: #62707d; --line: #d6d1c3; --accent: #c8452b; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #10161d; --ink: #e9e5da; --muted: #93a1ac; --line: #2b3742; --accent: #ff8062; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: clamp(40px, 12vh, 120px) 16px 80px; }
+  h1 { font: 600 2.4rem/1.1 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; margin: 0 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 40px; }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  li a {
+    display: block; padding: 18px 0; border-bottom: 1px solid var(--line);
+    color: inherit; text-decoration: none;
+  }
+  li strong { display: block; font-size: 1.2rem; }
+  li span { color: var(--muted); }
+  li a:hover strong, li a:focus-visible strong { color: var(--accent); }
+  li a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>oddhenry</h1>
+  <p class="lede">Små nettsider og eksperimenter.</p>
+
+  <!-- Ny nettside? Legg den i en egen mappe og kopier et <li> her. Se README.md. -->
+  <ul>
+    <li><a href="ukjent-farvann/">
+      <strong>Ukjent farvann</strong>
+      <span>Forslag til sider av internett du aldri har besøkt.</span>
+    </a></li>
+  </ul>
+</main>
+</body>
+</html>
